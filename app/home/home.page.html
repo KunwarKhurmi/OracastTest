@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      Oracast Test
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content>
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-card>
+    <img src="{{imgUrl}}" class="center" />
+    <ion-card-header>
+      <ion-card-title>{{firstName}} {{lastName}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{email}}
+    </ion-card-content>
+  </ion-card>
+  <ion-button expand="block"  (click) ="getAppVersion()">Get App Version</ion-button>
+</ion-content>
