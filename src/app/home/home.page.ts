@@ -58,10 +58,9 @@ export class HomePage {
   }
 
  getAppVersion() {
-    console.log(Promise.resolve(this.versionCodeService.getDeviceInfo()));
-    // Toast.show({
-    //   text: ""+ this.versionCodeService.getDeviceInfo()
-    // });
+    this.versionCodeService.getDeviceInfo().then((version) => {
+        console.log(version);
+    });
   }
 
 }

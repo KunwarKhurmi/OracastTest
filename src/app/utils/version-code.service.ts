@@ -12,6 +12,6 @@ export class VersionCodeService {
 
   async getDeviceInfo() {
     const info =  await Device.getInfo();
-    return  info.model;
+    return  info.appVersion;
   }
 }
